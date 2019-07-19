@@ -1,0 +1,160 @@
+/**********************default******************/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    background: url(../image/background-home-image.jpg);
+    background-color: #00BFBF;
+    color: #007373;
+    text-rendering: optimizeLegibility;
+    background-size: cover;
+    background-position: center;
+}
+
+/*.............................header code....................*/
+.header_logo{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1f 1fr;
+}
+
+.cls_time{
+    text-align: center;
+    border: 1px solid #00A8A8;
+    width: 120px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 15px;
+    padding-top: 10px;
+    border-radius: 10px;
+    animation: book_border 2s infinite;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 150px 1fr 350px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    position: relative;
+}
+.logo{
+    position: absolute;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #AAFFFF;
+    padding: 10px;
+    transition: 0.5s;
+}
+.logo:hover,
+.logo:active{
+    background-color: #007373;
+    box-shadow: 0px 2px 1px 2px #AAFFFF;
+}
+.header_title{
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    display: block;
+    animation: ani_title 5s infinite;
+    border-style: dotted;
+    border-width: 10px;
+    line-height: 100px;
+    border-radius: 30px;
+}
+
+@keyframes ani_title{
+    0% {
+        border-color: 	#A8FFFF; 
+    }
+    50%{
+        border-color: #00FFFF;
+    }
+    100%{
+        border-color: #00A8A8;
+    }
+}
+.header_about{
+    padding-top: 25px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+.header_about li a{
+    text-decoration: none;
+    padding-left: 5px;
+    position: absolute;
+    padding-top: 15px;
+}
+
+.header_about li{
+    list-style-type: none;
+    padding-left: 25px;
+}
+
+.img_phone, .img_about_logo, .img_fb_logo, .img_zalo_logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.img_about_logo:hover, .img_fb_logo:hover, .img_phone:hover, .img_zalo_logo:hover{
+    transform: scale(1.2);
+}
+
+/*xu lí cho link hover*/
+.header_about li a:hover{
+    border-bottom-color: #007373;
+    border-bottom-style: solid;
+    transition: 0.5s;
+    border-width: 2px;
+}
+
+/*.................section code..............................*/
+
+.section_body_1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 200px;
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+        position: relative;
+        text-align: center;
+}
+
+.img_body1, .img_body2, .img_body3{
+    width: 50%;
+    border-width: 2px;
+    border-style: solid;
+    transition: 1s;
+    animation: book_border 10s infinite; 
+}
+
+@keyframes book_border{
+    0% {
+        border-color: 	rgb(72, 255, 0); 
+    }
+    50%{
+        border-color: rgb(235, 238, 79);
+    }
+    100%{
+        border-color: rgb(245, 210, 114);
+    }
+}
+
+.img_body1:hover, .img_body2:hover, .img_body3:hover{
+    transform: scale(1.2);
+}

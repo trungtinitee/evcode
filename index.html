@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Study forever</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header_logo">
+            <a href="#" target="_blank">
+                <img class="logo" src="./image/logo.svg" alt="logo"></a>
+            <div id="id_time" class="cls_time"></div>
+        </div>
+
+        <div class="header_title">
+            <h1>học cho tương lai</h1>
+            <h1>học cho ngày mai</h1>
+        </div>
+        <ul class="header_about">
+            <li class="list_phone">
+                <img src="./image/phone_logo.png" alt="logo_phone" class="img_phone">
+                <a href="#">Phone No.: 0334919392</a>
+            </li>
+            <li class="list_zalo">
+                <img src="./image/zalo_logo.jpg" alt="logo_zalo" class="img_zalo_logo">
+                <a href="#">Zalo</a>
+            </li>
+            <li class="list_fb">
+                <img src="./image/logofb.jpg" alt="img_fb_logo" class="img_fb_logo">
+                <a href="https://www.facebook.com/lutrungtin" target="_blank">Facebook</a>
+            </li>
+            <li class="list_about">
+                <img src="./image/about_logo.jpeg" alt="img_about_logo" class="img_about_logo">
+                <a href="#">About</a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="section_body_1">
+        <div>
+            <a href="./html_change/duongloi_ev.html"><img src="./image/duongloi_image.jpeg" alt="img_duongloi"
+                    class="img_body1"></a>
+        </div>
+        <div>
+            <a href="#"><img src="./image/tutuong_image.jpg" alt="img_tutuong" class="img_body2"></a>
+        </div>
+        <div>
+            <a href="#"><img src="./image/maclenin_image.jpg" alt="img_maclenin" class="img_body3"></a>
+        </div>
+    </section>
+    <script>
+
+        function current_time_function() {
+            var get_time = document.getElementById("id_time");
+            var cr_time = new Date();
+            if (cr_time.getHours() < 10) {
+                var h_time = "0" + cr_time.getHours();
+            }
+            else {
+                var h_time = cr_time.getHours();
+            }
+            if (cr_time.getMinutes() < 10) {
+                var m_time = "0" + cr_time.getMinutes();
+            }
+            else {
+                var m_time = cr_time.getMinutes();
+            }
+            if (cr_time.getSeconds() < 10) {
+                var s_time = "0" + cr_time.getSeconds();
+            }
+            else {
+                var s_time = cr_time.getSeconds();
+            }
+            get_time.innerText = h_time + " : " + m_time + " : " + s_time;
+        }
+        setInterval(current_time_function, 1000);
+    </script>
+</body>
+
+</html>
