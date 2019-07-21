@@ -21,10 +21,11 @@ html{
 
 header{
     display: grid;
-    grid-template-columns: 250px 250px 250px 1fr;
+    grid-template-columns: 200px 200px 200px 200px 200px;
     margin-top: 20px;
-    height: 100px;
+    height: auto;
     justify-items: center;
+    margin-bottom: 25px;
     
 }
 .home_btn{
@@ -37,6 +38,23 @@ header{
     text-align: center;
     padding-top: 10px;
     background-color: #00BFBF;
+}
+
+.home_btn_done_edit{
+    margin-top: 15px;
+    display: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    text-align: center;
+    padding-top: 0px;
+    background-color: red;
+}
+
+.home_btn:hover{
+    background-color: #007373;
+    box-shadow: 0px 2px 1px 2px #AAFFFF;
 }
 
 header div a{
@@ -116,4 +134,10 @@ h4{
     margin-top: 5px;
     margin-right: 5px; 
     background-color: #00BFBF;
+}
+.current_do{
+    padding-left: 25px;
+}
+#list_delete{
+    display: none;
 }

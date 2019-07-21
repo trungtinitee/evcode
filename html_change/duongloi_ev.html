@@ -19,15 +19,22 @@
                 <div class="home_btn" id="btn_add">ADD</div>
             </a></div>
         <div><a href="#">
-            <div class="home_btn" id="btn_delete">DELETE</div>
+                <div class="home_btn" id="btn_delete">DELETE</div>
             </a></div>
-            <div>
-                <p style="color: red">Vui lòng ghi nhớ số câu đã thêm hiện tại để sử dụng nó cho phiên làm việc tiếp theo!</p>
-                <p>Số câu hiện tại là:</p>
-                <p id="current_number_question"></p>
-            </div>
+        <div><a href="#">
+                <div class="home_btn" id="btn_edit">EDIT</div>
+            </a></div>
+        <div><a href="#">
+                <div class="home_btn_done_edit" id="btn_edit1">Save edit</div>
+            </a></div>
 
     </header>
+    <div class="current_do">
+        <p style="color: red">Vui lòng ghi nhớ số câu đã thêm hiện tại để sử dụng nó cho phiên làm việc tiếp
+            theo! <br> Số câu hiện tại là:
+        </p>
+        <p id="current_number_question"></p>
+    </div>
     <section class="create_question">
         <div class="question">
             <div>Câu hỏi:</div>
@@ -41,7 +48,7 @@
     <section class="create_question">
         <div class="dap_an_section">
             <div>Đáp án:</div>
-            <div class="choose">Choose radio true</div>
+            <div class="choose">Only true radio</div>
             <div><input type="text" id="traloi1" name="traloi1"></div>
             <div><input type="radio" name="dapAn" value="0" id="dapAn1" checked>
                 <h4>A</h4>
@@ -60,9 +67,11 @@
             </div>
         </div>
     </section>
-    <section id="all_create" class="all_create_here">
+    <section id="all_create" class="all_create_here"></section>
+    <div id="list_delete">
 
-    </section>    
+    </div>
 </body>
 <script src="../javascript/javascript.js"></script>
+
 </html>
