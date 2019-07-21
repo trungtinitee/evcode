@@ -12,6 +12,8 @@ function change_question() {
             index_as = i;
         }
     }
+
+    // tao moi cac question
     var dem_in = 0;
 
     var section_all = document.createElement("section");
@@ -53,6 +55,8 @@ function change_question() {
     dem +=1;
 }
 
+// ham delete neu lam sai
+
 function func_delete(){
     var value_delete = prompt("Nhập câu cần xoá?");
     if (value_delete != null) {
@@ -64,5 +68,7 @@ function func_delete(){
         else alert("Hành động này đã bị huỷ");
     }
 }
+
+
 document.getElementById("btn_add").addEventListener("click", change_question);
 document.getElementById("btn_delete").addEventListener("click", func_delete);
