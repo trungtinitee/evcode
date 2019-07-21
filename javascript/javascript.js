@@ -1,5 +1,5 @@
 /*       get value textarea           */
-var dem = 0;
+
 function change_question() {
     var get_qs = document.getElementById("question_input").value;
     var get_as1 = document.getElementById("traloi1").value;
@@ -15,11 +15,12 @@ function change_question() {
 
     // get so cau hoi da duoc add
     var get_no_question = document.getElementById("current_number_question");
-    
+    get_no_question.innerHTML = dem;
+
     var dem_in = 0;
 
     var section_all = document.createElement("section");
-    section_all.setAttribute("id","section"+dem);
+    section_all.setAttribute("id", "section" + dem);
 
     var p = document.createElement("p");
     p.textContent = "Câu hỏi số: " + dem;
@@ -28,41 +29,41 @@ function change_question() {
 
     var p = document.createElement("p");
     p.textContent = get_qs;
-    p.setAttribute("id", "section"+ dem + "_p" + dem_in);
-    dem_in +=1;
+    p.setAttribute("id", "section" + dem + "_p" + dem_in);
+    dem_in += 1;
     section_all.appendChild(p);
 
     var p = document.createElement("p");
     p.textContent = get_as1;
-    p.setAttribute("id", "section"+ dem + "_p" + dem_in);
-    dem_in +=1;
+    p.setAttribute("id", "section" + dem + "_p" + dem_in);
+    dem_in += 1;
     section_all.appendChild(p);
 
     var p = document.createElement("p");
     p.textContent = get_as2;
-    p.setAttribute("id", "section"+ dem + "_p" + dem_in);
-    dem_in +=1;
+    p.setAttribute("id", "section" + dem + "_p" + dem_in);
+    dem_in += 1;
     section_all.appendChild(p);
 
     var p = document.createElement("p");
     p.textContent = get_as3;
-    p.setAttribute("id", "section"+ dem + "_p" + dem_in);
-    dem_in +=1;
+    p.setAttribute("id", "section" + dem + "_p" + dem_in);
+    dem_in += 1;
     section_all.appendChild(p);
 
     var p = document.createElement("p");
     p.textContent = "id: " + index_as;
     section_all.appendChild(p);
     document.getElementById("all_create").appendChild(section_all);
-    dem +=1;
+    dem += 1;
 }
 
 // ham delete neu lam sai
 
-function func_delete(){
+function func_delete() {
     var value_delete = prompt("Nhập câu cần xoá?");
     if (value_delete != null) {
-        var temp = document.getElementById("section"+value_delete);
+        var temp = document.getElementById("section" + value_delete);
         var ask = confirm("Có chắc xoá chưa bạn!!");
         if (ask) {
             temp.remove();
@@ -73,3 +74,15 @@ function func_delete(){
 
 document.getElementById("btn_add").addEventListener("click", change_question);
 document.getElementById("btn_delete").addEventListener("click", func_delete);
+var what_do = confirm("Bạn mới làm hay đã làm rồi?(Bấm Cancel nếu bạn mới làm!)");
+if (what_do == true) {
+    var no_before = prompt("Số câu đã làm là: ");
+}
+var dem;
+
+if (no_before != null) {
+    dem = Number(no_before)+1;
+}
+else {
+    dem = 0;
+}
