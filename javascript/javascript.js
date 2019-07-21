@@ -14,7 +14,8 @@ function change_question() {
     }
 
     // get so cau hoi da duoc add
-    var get_no_question = document.getElementById("current_number_question")
+    var get_no_question = document.getElementById("current_number_question");
+    
     var dem_in = 0;
 
     var section_all = document.createElement("section");
