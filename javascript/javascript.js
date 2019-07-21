@@ -162,7 +162,6 @@ function func_edit() {
                 temp = "dapAn3";
             }
             else temp = "dapAn4";
-            alert(temp);
             document.getElementById(temp).checked = true;       
         
         }
