@@ -66,13 +66,3 @@ function func_delete(){
 }
 document.getElementById("btn_add").addEventListener("click", change_question);
 document.getElementById("btn_delete").addEventListener("click", func_delete);
-/*check local storga */
-// {
-//     if (typeof(Storage) != undefined) {
-//         alert("ok");
-//     }
-//     else{
-//         alert("not ok");
-//     }
-
-// }
